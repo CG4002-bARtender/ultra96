@@ -1,0 +1,133 @@
+{
+  "numStartups": 1,
+  "installMethod": "native",
+  "autoUpdates": false,
+  "cachedGrowthBookFeatures": {
+    "tengu_herring_clock": false,
+    "tengu_event_sampling_config": {},
+    "tengu_frond_boric": {},
+    "tengu_log_segment_events": false,
+    "tengu_log_datadog_events": true,
+    "tengu_miraculo_the_bard": false,
+    "tengu_kairos_cron": true,
+    "tengu_quiet_hollow": true,
+    "tengu_marble_anvil": true,
+    "tengu_tool_pear": false,
+    "tengu_scarf_coffee": false,
+    "tengu_chomp_inflection": false,
+    "tengu_streaming_text": false,
+    "tengu_hawthorn_steeple": false,
+    "tengu-top-of-feed-tip": {
+      "tip": "",
+      "color": ""
+    },
+    "tengu_marble_whisper2": true,
+    "tengu_turtle_carbon": true,
+    "tengu_pr_status_cli": true,
+    "tengu_ccr_bridge": true,
+    "tengu_keybinding_customization_release": true,
+    "tengu_post_compact_survey": false,
+    "tengu_desktop_upsell": {
+      "enable_shortcut_tip": false,
+      "enable_startup_dialog": false
+    },
+    "tengu_claudeai_mcp_connectors": true,
+    "tengu_auto_mode_config": {
+      "enabled": "disabled",
+      "twoStageClassifier": true
+    },
+    "tengu_scratch": false,
+    "tengu_1p_event_batch_config": {
+      "scheduledDelayMillis": 10000,
+      "maxExportBatchSize": 400,
+      "maxQueueSize": 8192,
+      "path": "/api/event_logging/v2/batch"
+    },
+    "tengu_grey_wool": true,
+    "tengu_cobalt_compass": true,
+    "tengu_disable_bypass_permissions_mode": false,
+    "tengu_orchid_trellis": false,
+    "tengu_pid_based_version_locking": true,
+    "tengu_thinkback": false
+  },
+  "firstStartTime": "2026-03-14T13:34:50.868Z",
+  "opusProMigrationComplete": true,
+  "sonnet1m45MigrationComplete": true,
+  "userID": "9c8c76401612153e38ed874a0aa2b717cc44656ed241edd367f180d7f3fb09f9",
+  "changelogLastFetched": 1773495519744,
+  "autoUpdatesProtectedForNative": true,
+  "oauthAccount": {
+    "accountUuid": "209ac48a-43cc-422c-bf78-452d7e6896ca",
+    "emailAddress": "tvageesan303@gmail.com",
+    "organizationUuid": "f71dd87b-eafb-4f2b-a20e-dd7bbe196752",
+    "hasExtraUsageEnabled": false,
+    "billingType": "stripe_subscription",
+    "accountCreatedAt": "2024-10-02T06:32:55.367808Z",
+    "subscriptionCreatedAt": "2024-12-11T15:03:57.159249Z",
+    "displayName": "Thiru",
+    "organizationRole": "admin",
+    "workspaceRole": null,
+    "organizationName": "tvageesan303@gmail.com's Organization"
+  },
+  "claudeCodeFirstTokenDate": "2025-07-23T11:55:23.816768Z",
+  "hasCompletedOnboarding": true,
+  "lastOnboardingVersion": "2.1.76",
+  "githubRepoPaths": {
+    "cg4002-bartender/ultra96": [
+      "/home/xilinx"
+    ]
+  },
+  "voiceNoticeSeenCount": 1,
+  "lastReleaseNotesSeen": "2.1.76",
+  "projects": {
+    "/home/xilinx": {
+      "allowedTools": [],
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "hasTrustDialogAccepted": false,
+      "projectOnboardingSeenCount": 1,
+      "hasClaudeMdExternalIncludesApproved": false,
+      "hasClaudeMdExternalIncludesWarningShown": false,
+      "exampleFiles": [],
+      "lastCost": 0,
+      "lastAPIDuration": 0,
+      "lastAPIDurationWithoutRetries": 0,
+      "lastToolDuration": 0,
+      "lastDuration": 32483,
+      "lastLinesAdded": 0,
+      "lastLinesRemoved": 0,
+      "lastTotalInputTokens": 0,
+      "lastTotalOutputTokens": 0,
+      "lastTotalCacheCreationInputTokens": 0,
+      "lastTotalCacheReadInputTokens": 0,
+      "lastTotalWebSearchRequests": 0,
+      "lastFpsAverage": 2.37,
+      "lastFpsLow1Pct": 12.2,
+      "lastModelUsage": {},
+      "lastSessionId": "021b9a7d-22f6-4ef8-b109-5028ef7d65e5",
+      "lastSessionMetrics": {
+        "frame_duration_ms_count": 72,
+        "frame_duration_ms_min": 0.9946110000000772,
+        "frame_duration_ms_max": 81.97979799999985,
+        "frame_duration_ms_avg": 7.385819430555639,
+        "frame_duration_ms_p50": 3.8616125000016837,
+        "frame_duration_ms_p95": 31.568496599998728,
+        "frame_duration_ms_p99": 66.12920065000013
+      }
+    }
+  },
+  "clientDataCache": {
+    "data": {},
+    "timestamp": 1773495547281
+  },
+  "groveConfigCache": {
+    "209ac48a-43cc-422c-bf78-452d7e6896ca": {
+      "grove_enabled": true,
+      "timestamp": 1773495547325
+    }
+  },
+  "penguinModeOrgEnabled": false,
+  "cachedExtraUsageDisabledReason": "org_level_disabled"
+}
