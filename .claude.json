@@ -1,7 +1,21 @@
 {
-  "numStartups": 1,
+  "numStartups": 2,
   "installMethod": "native",
   "autoUpdates": false,
+  "tipsHistory": {
+    "new-user-warmup": 2,
+    "plan-mode-for-complex-tasks": 2,
+    "terminal-setup": 2,
+    "memory-command": 2,
+    "theme-command": 2,
+    "colorterm-truecolor": 2,
+    "status-line": 2,
+    "prompt-queue": 2,
+    "enter-to-steer-in-relatime": 2,
+    "todo-list": 2,
+    "ide-upsell-external-terminal": 2,
+    "install-github-app": 2
+  },
   "cachedGrowthBookFeatures": {
     "tengu_herring_clock": false,
     "tengu_event_sampling_config": {},
@@ -48,7 +62,35 @@
     "tengu_disable_bypass_permissions_mode": false,
     "tengu_orchid_trellis": false,
     "tengu_pid_based_version_locking": true,
-    "tengu_thinkback": false
+    "tengu_thinkback": false,
+    "tengu_mcp_elicitation": true,
+    "tengu_glacier_2xr": false,
+    "tengu_swinburne_dune": true,
+    "tengu_pebble_leaf_prune": false,
+    "tengu_passport_quail": false,
+    "tengu_coral_fern": false,
+    "tengu_bergotte_lantern": false,
+    "tengu_sotto_voce": true,
+    "tengu_system_prompt_global_cache": true,
+    "tengu_streaming_tool_execution2": true,
+    "tengu_moth_copse": false,
+    "tengu_tool_search_unsupported_models": [
+      "haiku"
+    ],
+    "tengu_defer_all_bn4": false,
+    "tengu_chair_sermon": false,
+    "tengu_attribution_header": true,
+    "tengu_prompt_cache_1h_config": {
+      "allowlist": [
+        "repl_main_thread*",
+        "sdk",
+        "auto_mode"
+      ]
+    },
+    "tengu_session_memory": false,
+    "tengu_permission_explainer": true,
+    "tengu_destructive_command_warning": false,
+    "tengu_amber_prism": true
   },
   "firstStartTime": "2026-03-14T13:34:50.868Z",
   "opusProMigrationComplete": true,
@@ -77,7 +119,7 @@
       "/home/xilinx"
     ]
   },
-  "voiceNoticeSeenCount": 1,
+  "voiceNoticeSeenCount": 3,
   "lastReleaseNotesSeen": "2.1.76",
   "projects": {
     "/home/xilinx": {
@@ -129,5 +171,7 @@
     }
   },
   "penguinModeOrgEnabled": false,
-  "cachedExtraUsageDisabledReason": "org_level_disabled"
+  "cachedExtraUsageDisabledReason": "org_level_disabled",
+  "officialMarketplaceAutoInstallAttempted": true,
+  "officialMarketplaceAutoInstalled": true
 }

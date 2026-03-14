@@ -27,3 +27,7 @@ jupyter_notebooks/.ipynb_checkpoints/
 *.tcl
 __pycache__/
 *.pyc
+
+# Claude
+./claude
+.claude

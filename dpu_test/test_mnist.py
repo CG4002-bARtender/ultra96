@@ -1,3 +1,4 @@
+#!/usr/local/share/pynq-venv/bin/python3
 import warnings
 warnings.filterwarnings("ignore", message=".*xbutil.*")
 warnings.filterwarnings("ignore", message=".*XRT.*")
