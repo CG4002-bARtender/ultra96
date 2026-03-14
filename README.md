@@ -13,7 +13,7 @@ This project runs a hardware-accelerated MNIST digit classifier on an Ultra96 FP
 ```
 .
 ├── main.py              # Entry point — wires together DpuRunner and Server
-├── test.py              # Manual test client: sends a synthetic image and prints the prediction
+├── test_pub.py          # Test client: sends a synthetic image over MQTT and prints the prediction
 ├── src/
 │   ├── runner.py        # DpuRunner: loads the DPU overlay and executes inference
 │   ├── server.py        # Server: MQTT message handling and inference orchestration
@@ -46,19 +46,21 @@ This project runs a hardware-accelerated MNIST digit classifier on an Ultra96 FP
 ### Running the server
 
 ```bash
-sudo ./main.py
+pynq-python main.py
 ```
 
 The server will load the DPU overlay (takes a few seconds) and then block waiting for MQTT messages.
 
+> **Note:** must be run with `pynq-python`, not plain `python3`, as it sets up the environment variables required by XRT/VART.
+
 ### Running the test client
 
-`test.py` sends a synthetic 28x28 image (a vertical line — representative of the digit "1") to the running server and prints the predicted digit.
+`test_pub.py` sends a synthetic 28x28 image (a vertical line — representative of the digit "1") to the running server and prints the predicted digit.
 
 In a second terminal:
 
 ```bash
-sudo ./test.py
+python3 test_pub.py
 ```
 
 Expected output:
