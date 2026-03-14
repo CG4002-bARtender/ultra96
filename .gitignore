@@ -1,0 +1,29 @@
+# Shell & system
+.bash_history
+.bash_logout
+.bashrc
+.profile
+.sudo_as_admin_successful
+.wget-hsts
+
+# SSH - never commit this
+.ssh/
+
+# Cache & local config
+.cache/
+.local/
+.dotnet/
+
+# IDE
+.vscode-server/
+
+# Jupyter
+.ipython/
+jupyter_notebooks/.ipynb_checkpoints/
+
+# Xilinx/Pynq specific
+*.bit.bin
+*.hwh
+*.tcl
+__pycache__/
+*.pyc
