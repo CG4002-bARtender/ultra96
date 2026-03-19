@@ -1,5 +1,4 @@
 import time
-
 import paho.mqtt.client as mqtt
 
 
@@ -16,7 +15,8 @@ class MQTTClient:
 
     def _on_connect(self, client, userdata, flags, rc, properties=None):
         if rc == 0:
-            client.subscribe("ultra96/input")
+            client.subscribe("ultra96/audio_in")
+            print("[MQTT] Subscribed to ultra96/audio_in")
         else:
             print(f"[MQTT] Connection failed (rc={rc})")
 
