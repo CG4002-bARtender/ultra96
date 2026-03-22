@@ -50,8 +50,8 @@ CHANNELS       = 1
 IDLE_TIMEOUT_S = 1.5    # seconds of silence → clip complete
 
 # MQTT topics 
-TOPIC_AUDIO_IN = "ultra96/audio_in"
-TOPIC_ORDER    = "/order"   # game engine input — {"id": <int>}
+TOPIC_AUDIO_IN = "audio"
+TOPIC_ORDER    = "order"   # game engine input — {"id": <int>}
 TOPIC_ACK      = "ack"      # bar ESP32 ACK — 0x01 byte
 
 

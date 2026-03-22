@@ -31,3 +31,4 @@ __pycache__/
 # Claude
 ./claude
 .claude
+.claude.json
