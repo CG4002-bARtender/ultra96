@@ -1,15 +1,28 @@
+import ssl
 import paho.mqtt.client as mqtt
 
 
 class MQTTClient:
-    def __init__(self, broker, port, on_message_cb):
+    def __init__(self, broker, port, on_message_cb,
+                 ca_cert=None, client_cert=None, client_key=None):
         self._broker = broker
         self._port = port
-
+        self._intentional_disconnect = False
+ 
         self._client = mqtt.Client(client_id="ultra96")
         self._client.on_connect = self._on_connect
         self._client.on_disconnect = self._on_disconnect
         self._client.on_message = on_message_cb
+ 
+        # mTLS
+        if ca_cert and client_cert and client_key:
+            self._client.tls_set(
+                ca_certs=ca_cert,
+                certfile=client_cert,
+                keyfile=client_key,
+                tls_version=ssl.PROTOCOL_TLS
+            )
+            print("[MQTT] mTLS configured")
 
     def _on_connect(self, client, userdata, flags, rc, properties=None):
         if rc == 0:
