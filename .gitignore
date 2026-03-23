@@ -32,3 +32,10 @@ __pycache__/
 ./claude
 .claude
 .claude.json
+
+
+certs/*.key
+certs/ca.key
+certs/*.srl
+certs/*.csr
+certs/*.p12
