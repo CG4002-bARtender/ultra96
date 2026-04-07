@@ -2,7 +2,6 @@
 AudioServer: MQTT client that receives raw audio chunks from bar ESP32, buffers into clips,
 """
 
-import json
 import os
 import tempfile
 import threading
@@ -125,8 +124,8 @@ class AudioServer:
             drink_id = int(np.argmax(logits))
 
             # Publish to game engine
-            self._mqtt.publish(TOPIC_ORDER, json.dumps({"id": drink_id}))
-            print(f"[AudioServer] Published → /order  {{\"id\": {drink_id}}} ({predicted})")
+            self._mqtt.publish(TOPIC_ORDER, bytes([drink_id]))
+            print(f"[AudioServer] Published → /order  {drink_id} ({predicted})")
 
             # ACK bar ESP32 — inference done, recording cycle complete
             self._mqtt.publish(TOPIC_ACK, b"\x01")

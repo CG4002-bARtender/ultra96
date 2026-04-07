@@ -28,6 +28,9 @@ jupyter_notebooks/.ipynb_checkpoints/
 __pycache__/
 *.pyc
 
+
+*wav
+
 # Claude
 ./claude
 .claude
