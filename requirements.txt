@@ -1,0 +1,5 @@
+pynq>=3.0.1
+pynq-dpu>=2.5.1
+librosa
+numpy<2
+scipy
