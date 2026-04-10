@@ -13,6 +13,7 @@ CLASSES = ['aviation', 'godfather', 'irishcoffee', 'martini', 'midorisour',
 
 class DpuRunner:
     def __init__(self, xmodel_path, overlay_path="dpu.bit"):
+        self._closed = False
         self.overlay = DpuOverlay(overlay_path)
 
         self._graph = xir.Graph.deserialize(xmodel_path)
@@ -28,6 +29,50 @@ class DpuRunner:
         self._runner = vart.Runner.create_runner(self._subgraph, "run")
         self.input_tensors = self._runner.get_input_tensors()
         self.output_tensors = self._runner.get_output_tensors()
+
+    # ------------------------------------------------------------------
+    # Resource cleanup — must delete runner BEFORE overlay so XRT releases
+    # the DPU_0 kernel context in the correct order.
+    # ------------------------------------------------------------------
+
+    def close(self):
+        """Explicitly release the vart.Runner and DpuOverlay.
+
+        Safe to call multiple times; subsequent calls are no-ops.
+        """
+        if self._closed:
+            return
+        self._closed = True
+
+        # 1. Free any pynq.allocate buffers held by the runner (none currently,
+        #    but the pattern is: buffers first, runner second).
+
+        # 2. Delete the vart.Runner — releases the XRT kernel context.
+        if self._runner is not None:
+            del self._runner
+            self._runner = None
+
+        # 3. Release the DpuOverlay.  pynq 2.x does not expose free()/close(),
+        #    so unconditional del is the correct mechanism; call free() first if
+        #    the installed version provides it.
+        if self.overlay is not None:
+            if hasattr(self.overlay, 'free'):
+                self.overlay.free()
+            elif hasattr(self.overlay, 'close'):
+                self.overlay.close()
+            del self.overlay
+            self.overlay = None
+
+    def __del__(self):
+        """Fallback cleanup in case close() was not called explicitly."""
+        self.close()
+
+    def __enter__(self):
+        return self
+
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        self.close()
+        return False
 
     def run(self, mel_float):
         in_dims = tuple(self.input_tensors[0].dims)
